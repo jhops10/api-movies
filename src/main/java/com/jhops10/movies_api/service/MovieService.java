@@ -47,4 +47,26 @@ public class MovieService {
         return movies;
     }
 
+    public List<Movie> getMoviesByRating (Integer rating) {
+        List<Movie> movies = movieRepository.findByRating(rating);
+
+        if (movies.isEmpty()) {
+            throw new NotFoundException("No movies found with this rating");
+        }
+
+        return movies;
+    }
+
+    public List<Movie> getMoviesByReleaseYear (Integer releaseYear) {
+        List<Movie> movies = movieRepository.findByReleaseYear(releaseYear);
+
+        if (movies.isEmpty()) {
+            throw new NotFoundException("No movies found with this relase year");
+        }
+
+        return movies;
+    }
+
+
+
 }
