@@ -53,4 +53,9 @@ public class MovieController {
         return movieService.updateMovie(movie);
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteMovieById(@PathVariable Long id) {
+        movieService.deleteMovie(id);
+    }
+
 }
