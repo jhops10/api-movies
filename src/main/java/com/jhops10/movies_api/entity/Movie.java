@@ -18,7 +18,58 @@ public class Movie implements Serializable {
 
     private String title;
     private String description;
-    private Integer releaseDate;
+    private Integer releaseYear;
     private Integer rating;
 
+    public Movie () {
+
+    }
+
+    public Movie(Long id, String title, String description, Integer releaseDate, Integer rating) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.releaseYear = releaseDate;
+        this.rating = rating;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Integer getReleaseYear() {
+        return releaseYear;
+    }
+
+    public void setReleaseYear(Integer releaseYear) {
+        this.releaseYear = releaseYear;
+    }
+
+    public Integer getRating() {
+        return rating;
+    }
+
+    public void setRating(Integer rating) {
+        this.rating = rating;
+    }
 }
