@@ -38,5 +38,14 @@ public class MovieController {
         return movieService.getMoviesByDescription(description);
     }
 
+    @GetMapping("find/by-rating")
+    public List<Movie> getMoviesByRating(@RequestParam Integer rating) {
+        return movieService.getMoviesByRating(rating);
+    }
+
+    @GetMapping("find/by-release-year")
+    public List<Movie> getMoviesByReleaseYear(@RequestParam Integer releaseYear) {
+        return movieService.getMoviesByReleaseYear(releaseYear);
+    }
 
 }
