@@ -48,4 +48,9 @@ public class MovieController {
         return movieService.getMoviesByReleaseYear(releaseYear);
     }
 
+    @PutMapping
+    public Movie updateMovie(@RequestBody Movie movie) {
+        return movieService.updateMovie(movie);
+    }
+
 }

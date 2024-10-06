@@ -67,6 +67,8 @@ public class MovieService {
         return movies;
     }
 
-
+    public Movie updateMovie(Movie movie) {
+        return movieRepository.save(movie);
+    }
 
 }
